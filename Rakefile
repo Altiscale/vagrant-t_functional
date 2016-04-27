@@ -20,7 +20,7 @@ task default: [:spec, :rubocop]
 task :publish do
   require_relative 'lib/vagrant-t_functional/version'
   sh "gem inabox pkg/vagrant-t_functional-#{VagrantPlugins::T_functional::VERSION}.gem "\
-  '-g https://gems.service.altiscale.com'
+  '-g https://gems.service.verticloud.com'
 end
 
 task :clean do
