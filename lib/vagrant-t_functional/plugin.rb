@@ -43,7 +43,7 @@ module VagrantPlugins
       end
 
       with_target_vms(nil, single_target: true) do |vm|
-        vm.action(:ssh_run, ssh_run_command: 'git clone https://github.com/Altiscale/sig-core-t_functional.git; cd sig-core-t_functional')
+        vm.action(:ssh_run, ssh_run_command: 'echo "llllllllll"; rm -rf *; git clone -b alti_rpmtest https://github.com/Altiscale/sig-core-t_functional.git; sudo sig-core-t_functional/runtests.sh')
       end
 
       return 0
