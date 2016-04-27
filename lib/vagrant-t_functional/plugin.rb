@@ -46,6 +46,10 @@ module VagrantPlugins
         vm.action(:ssh_run, ssh_run_command: 'git clone -b alti_rpmtest https://github.com/Altiscale/sig-core-t_functional.git; sudo sig-core-t_functional/runtests.sh')
       end
 
+      with_target_vms(argv, :reverse => true) do |vm|
+        vm.action(:destroy, :force_confirm_destroy => true)
+      end
+
       return 0
     end
 
