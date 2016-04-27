@@ -1,0 +1,7 @@
+.vagrant/
+.vagrant/*
+.*.swp
+.*.swo
+pkg/
+pkg/*
+Gemfile.lock
